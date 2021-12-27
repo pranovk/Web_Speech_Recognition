@@ -1,0 +1,864 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" SameSite=None />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Superb Mart</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+    <!-- <link rel="stylesheet" href="./styles/zoom-gallery-styles/normalize.styles">
+    <link rel="stylesheet" href="./styles/zoom-gallery-styles/foundation.styles">
+    <link rel="stylesheet" href="./js/fancybox/source/jquery.fancybox.styles">
+    <link rel="stylesheet" href="./styles/zoom-gallery-styles/magnific-popup.styles">
+    <link rel="stylesheet" href="./styles/zoom-gallery-styles/xzoom.styles"> -->
+ 
+  </head>
+  <body onload="CartValue()">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark customizedNavbar">
+          <a class="navbar-brand" href="#">
+              <div class="brandLogo">
+                <p class="logoBoldText">SuperbMart</p>
+                <p class="logoSubText">eMarketplace</p>
+              </div>
+            </a>
+        <div class="showMobile toggleNavbar">
+          <!-- cart section -->
+          <div class="cartFlex">
+            <div class="cartIcon">
+              <p class="cartCount">0</p>
+              <img src="static/img/cart-img.png" alt="" />
+            </div>
+            <!-- <p class="cartText">Cart</p> -->
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="navbarContainer">
+          <div class="topNavBar">
+              
+            <span class="navbar-text mr-auto userName hideMobile">
+              Mr.Ramakrishna Yalamanchili
+            </span>
+            <ul class="navbar-nav hideMobile">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Track Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Superb Care</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mainNavbar">
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav showMobile">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">My Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cards</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Track Orders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Superb Care</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sign Out</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Category
+                  </a>
+                  <div
+                    class="dropdown-menu customMegamenu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <div class="container">
+                      <div class="row fullwidthRow">
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Category
+                          </p>
+
+                          <ul class="nav flex-column">
+                            <li class="nav-item womenFashionCategory">
+                              Women's Fashion
+                              <i
+                                class="fa fa-angle-right"
+                                aria-hidden="true"
+                              ></i>
+                            </li>
+                            <li class="nav-item menFashionCategory">
+                              Men's Fashion
+                              <i
+                                class="fa fa-angle-right"
+                                aria-hidden="true"
+                              ></i>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Title
+                          </p>
+                          <ul class="nav flex-column womenFashion">
+                            <li class="nav-item">
+                              Kurtas & Kurtis
+                            </li>
+                            <li class="nav-item">
+                              Suit Sets
+                            </li>
+                            <li class="nav-item">
+                              Sarees & Lehenga sets
+                            </li>
+                          </ul>
+                          <ul class="nav flex-column menFashion">
+                            <li class="nav-item">
+                              Formal Shoes
+                            </li>
+                            <li class="nav-item">
+                              Running Shoes
+                            </li>
+                            <li class="nav-item">
+                              Training Shoes
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Title
+                          </p>
+                          <ul class="nav flex-column womenFashion">
+                            <li class="nav-item">
+                              Kurtas & Kurtis
+                            </li>
+                            <li class="nav-item">
+                              Suit Sets
+                            </li>
+                            <li class="nav-item">
+                              Sarees & Lehenga sets
+                            </li>
+                          </ul>
+                          <ul class="nav flex-column menFashion">
+                            <li class="nav-item">
+                              Formal Shoes
+                            </li>
+                            <li class="nav-item">
+                              Running Shoes
+                            </li>
+                            <li class="nav-item">
+                              Training Shoes
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Title
+                          </p>
+                          <ul class="nav flex-column womenFashion">
+                            <li class="nav-item">
+                              Kurtas & Kurtis
+                            </li>
+                            <li class="nav-item">
+                              Suit Sets
+                            </li>
+                            <li class="nav-item">
+                              Sarees & Lehenga sets
+                            </li>
+                          </ul>
+                          <ul class="nav flex-column menFashion">
+                            <li class="nav-item">
+                              Formal Shoes
+                            </li>
+                            <li class="nav-item">
+                              Running Shoes
+                            </li>
+                            <li class="nav-item">
+                              Training Shoes
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                      </div>
+                    </div>
+                    <!--  /.container  -->
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Brands</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Stores</a>
+                </li>
+              </ul>
+
+              <div class="col-auto hideMobile">
+                <label class="sr-only" for="inlineFormInputGroup">Product Search</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text locationRoot">
+                      <div class="locationDetailsFlex">
+                        <div class="locationIcon">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationContent">
+                          <p>Delivering to</p>
+                          <p class="searchBarpinCode">400020</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inlineFormInputGroup"
+                    placeholder="Product Search"
+                  />
+                  <div class="input-group-append searchBarRoot">
+                    <button class="btn btn-secondary" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- search bar enfd -->
+              <div class="sortSection hideMobile">
+                <div class="sortByText">
+                  <p>Sort by</p>
+                </div>
+                <div class="sortByFlex atoz">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>A</p>
+                    <p>Z</p>
+                  </div>
+                </div>
+                <div class="sortByFlex ztoa">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>Z</p>
+                    <p>A</p>
+                  </div>
+                </div>
+                <div class="sortByFlex oneToNine">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>1</p>
+                    <p>9</p>
+                  </div>
+                </div>
+                <div class="sortByFlex nineToOne">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>9</p>
+                    <p>1</p>
+                  </div>
+                </div>
+              </div>
+              <!-- cart section -->
+              <div class="cartFlex hideMobile">
+                <div class="cartIcon">
+                  <p class="cartCount" id="cart_value"></p>
+                  <a id="cart_page" href="/cart"><img src="static/img/cart-img.png" alt="" /></a>
+                </div>
+                <p class="cartText">Cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="single-product">
+        <div class="container-fluid middle4">
+          <div class="row">
+            
+            <div class="col-md-10">
+                <div class="cartBreadcrumb">
+                    <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            Categories
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            Spicies 
+                        </li>
+                        <li class="breadcrumb-item"> Sugar</li>
+                        <li class="breadcrumb-item">Cane Sugar (Brown)</li>
+                      </ol>
+                    </nav>
+                  </div>
+                  
+            </div>
+            <div class="col-md-2 hideMobile">
+                <div class="cart flex">
+                  <img src="static/img/single-product/cart.png">
+                  <div>
+                      <p> Items: <span id="cart">3</span></p>
+                    <p>Total: ₹433</p>
+                  </div>
+                </div>  
+              </div>
+            <div class="col-md-2 hideMobile">
+              <div class="cart flex">
+                
+              </div>  
+            </div>
+  
+          </div>
+  
+          <div class="row">
+            <div class="col-md-10 middle3">
+              <div class="left-col-wrapper">
+                <div class="row">
+                  <div class="col-md-5 ">
+                    <div class="single-product-page-left" style="">
+                        <div class="pictures" id="pictures"style="display:block" >
+                            <img class="xzoom4" id="xzoom-fancy" src="static/img/products/can-sugar-louse2.jpeg" xoriginal="static/img/products/can-sugar-louse2.jpeg" />
+                            <div class="xzoom-thumbs" style="overflow:scroll; height:400px;">
+                            <img class="xzoom-gallery4" width="80" src="static/img/products/can-sugar.jpeg"  xpreview="static/products/can-sugar.jpeg" title="The description goes here">
+                            <img class="xzoom-gallery4" width="80" src="static/img/products/can-sugar-louse.jpeg" title="The description goes here">
+                            <img class="xzoom-gallery4" width="80" src="static/img/products/can-sugar.jpeg"  xpreview="static/img/products/can-sugar.jpeg" title="The description goes here">
+                            
+                            <img class="xzoom-gallery4 isVideo"  width="80" src="static/img/single-product/videoIcon.webp" title="The description goes here">
+                            </div>
+                            
+                            <div class="hideVideo">
+                                <iframe width="300" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="0" autoplay="1"></iframe>
+                            </div>
+                        </div>
+                        <div class="description-wrapper" id="Product_Reviews" style="display:none">
+                            <p>Product Reviews</p>
+                            <ul>
+                              <li>Called as Nattu Sarkarai in Tamil (நாட்டு சக்கரை)</li>
+                              <li>Extracted from Pure Sugarcane</li>
+                              <li>Raw sugar cane jaggery powder</li>
+                              <li>No Artificial Colours or Flavours added</li>
+                              <li>Not Bleached and 100% Natural</li>
+                              <li>Shelf life 9 months</li>
+                              
+                            </ul>
+                          </div>
+                          <div class="description-wrapper" id="Product_Description" style="display:none">
+                              <p>Product Description</p>
+                              <ul>
+                                <li>Called as Nattu Sarkarai in Tamil (நாட்டு சக்கரை)</li>
+                                <li>Extracted from Pure Sugarcane</li>
+                                <li>Raw sugar cane jaggery powder</li>
+                                <li>No Artificial Colours or Flavours added</li>
+                                <li>Not Bleached and 100% Natural</li>
+                                <li>Shelf life 9 months</li>
+                                
+                              </ul>
+                            </div>
+                            <div class="description-wrapper" id="Seller_Information" style="display:none">
+                                <p>Seller Information</p>
+                                <ul>
+                                  <li>Called as Nattu Sarkarai in Tamil (நாட்டு சக்கரை)</li>
+                                  <li>Extracted from Pure Sugarcane</li>
+                                  <li>Raw sugar cane jaggery powder</li>
+                                  <li>No Artificial Colours or Flavours added</li>
+                                  <li>Not Bleached and 100% Natural</li>
+                                  <li>Shelf life 9 months</li>
+                                  
+                                </ul>
+                              </div>
+                              <div class="description-wrapper" id="Health_Information" style="display:none">
+                                  <p>Health Information</p>
+                                  <ul> 
+                                    <li>It's rich in antioxidants so it helps fights infections and boost the immunity</li>
+                                    <li>It's rich in iron, magnesium, calcium and other electrolytes so it's great for dehydration.</li>
+                                    <li>It helps cure the common cold and other infections and also fight fever as it boosts the body's protein levels.</li>
+                                    
+                                    
+                                  </ul>
+                                </div>
+                                <div class="description-wrapper" id="Technical_Specifications" style="display:none">
+                                    <p>Technical Specifications</p>
+                                    <table class="table table-bordered cardBody tbl-cart" >
+                                        <thead>
+                                            <tr>
+                                                <td class="hidden-xs" style=" border-right: 1px solid #fff;
+                                                border-left: 1px solid #fff;text-align: center;">Content</td>
+                                                <td style=" border-right: 1px solid #fff;
+                                                border-left: 1px solid #fff;text-align: center;">Specifications</td>
+                                                
+                                                 
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                  <td>Brown cane sugar</td>
+                                                  <td>Refined Standards To Icumsa 600-1200</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Polarity at 20C </td>
+                                                  <td>97.8C to 99.2C</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Sulphate content</td>
+                                                  <td>0.15% max.</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Ash content </td>
+                                                  <td>0.15% max. weight</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Moisture</td>
+                                                  <td>0.15% Max</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Solubility</td>
+                                                  <td>97% Dry &amp; Free Flowing</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Radiation</td>
+                                                  <td>Normal w/o presence of caesium or iodine</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Colour</td>
+                                                  <td>Golden Brown Crop 2011 Or Later</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Granulation</td>
+                                                  <td>1.00-1.5am/mm</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Reducing Sugar</td>
+                                                  <td>0.05% Max by weight</td>
+                                                  
+                                                  </tr>
+                                                  <tr>
+                                                  <td>Substance</td>
+                                                  <td>Solid Cristal</td>
+                                                  
+                                                  </tr>
+                                                </tbody>
+  
+                                            </table>
+                                      
+                                    </ul>
+                                  </div>
+                    </div>
+                  </div>
+                  <div class="col-md-5 nopadding" >
+                    <div class="single-product-page-center" >
+                      <div class="row">
+                        <div class="col-md-8" >
+                          <div class="product-name">Cane Sugar (Brown), 1Kg</div>
+                          <div class="d-flex justify-content-between">
+                            <div class="mrp">M.R.P:<del>₹130</del>
+                              <p>Price: <span class="price-color">₹110</span></p>
+                              <small>(Inclusive of all taxes)</small>
+                            </div>
+                            <div class="discount">You save: <span class="price-color">₹20 (%15)</span></div>
+                          </div>
+                          <div class="qty-selection">
+                            <div class="qty-box price-color">
+                              250g
+                            </div>
+                            <div class="qty-box price-color">
+                              500g
+                            </div>
+                            <div class="qty-box price-color active-box">
+                              1Kg
+                            </div>
+                          </div>
+
+                          <a style="font-size:14px"> Delivery: </a><b>Sunday, Sep 20 </b><a href="#" style="font-size:14px">Details </a>
+                        
+
+                        </div>
+                        <div class="col-md-4">
+                          <div class="product-qty">
+                            <select id="product_qty" onclick="CartValue()">
+                              <option value="1">Qty: 1</option>
+                              <option value="2">Qty: 2</option>
+                              <option value="3">Qty: 3</option>
+                            </select>
+                          </div>
+                          <button class="add-to-cart" ><a id="add_cart" href="/cart">Add to cart</a></button>
+                          <button class="add-to-shopping">Add to Shopping list</button>
+                        </div>
+                        <div class="col-md-12" >
+                          <div class="d-flex justify-content-between quality-img-wrapper"style="height:60px;">
+                            <div>
+                              <img src="static/img/single-product/made-in-india.png" style="width: 50px;height:50px;padding: 0px 0px 60px 0px">
+                            </div>
+                            <div>
+                              <img src="static/img/single-product/direct-from-farm.png" style="width: 50px;height:50px;padding: 0px 0px 60px 0px">
+                              
+                            </div>
+                            <div>
+                              <img src="static/img/single-product/organic.png" style="width: 20px;height:50px;padding: 0px 0px 60px 0px">
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12" style="overflow:scroll;height:200px">
+                            <div class="description-wrapper" id="Product_Reviews" >
+                                <p>Brief Description</p>
+                                <ul>
+                                  <li>Called as Nattu Sarkarai in Tamil (நாட்டு சக்கரை)</li>
+                                  <li>Extracted from Pure Sugarcane</li>
+                                  <li>Raw sugar cane jaggery powder</li>
+                                  <li>No Artificial Colours or Flavours added</li>
+                                  <li>Not Bleached and 100% Natural</li>
+                                  <li>Shelf life 9 months</li>
+                                  
+                                </ul>
+                              </div>
+                                
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2 nopadding">
+                    <div class="single-product-page-right">
+                      <div class="strong-wrapper">
+                        <strong>Important Facts</strong>
+                      </div>
+                      <div class="important-facts-wrapper">
+                        <img src="static/img/single-product/important-facts.png">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="tab-content singleProductTab">
+                <div class="tab-pane active" id="Pictures" role="tabpanel">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis quae reprehenderit eum quia pariatur itaque dolorum dolores ea, sequi veritatis consequuntur quo impedit velit quos possimus et rerum, aliquid rem!</p>
+                </div>
+                <div class="tab-pane" id="sellerInfo" role="tabpanel">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed cum dolorum quos possimus quasi aut neque natus alias dicta itaque illum consequatur ad omnis sapiente nesciunt fugiat, excepturi eaque nemo.</p>
+                </div>
+                <div class="tab-pane" id="productDesc" role="tabpanel">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, earum commodi eaque magnam numquam modi exercitationem, nesciunt rem neque vel soluta dolorem porro ut voluptatum at corporis. Dicta, labore eligendi.</p>
+                </div>
+                <div class="tab-pane" id="healthInfo" role="tabpanel">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, earum commodi eaque magnam numquam modi exercitationem, nesciunt rem neque vel soluta dolorem porro ut voluptatum at corporis. Dicta, labore eligendi.</p>
+                </div>
+                <div class="tab-pane" id="productReview" role="tabpanel">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, earum commodi eaque magnam numquam modi exercitationem, nesciunt rem neque vel soluta dolorem porro ut voluptatum at corporis. Dicta, labore eligendi.</p>
+                </div>
+            </div>
+            </div>
+            
+            <div class="col-md-2 nopadding"style="overflow:scroll; height:430px;position:absolute; top:80px; right:0px; ">
+                <div class="showMobile">
+                <div class="cart flex">
+                    <img src="static/img/single-product/cart.png">
+                    <div>
+                      <p>Items: 3</p>
+                      <p>Total: ₹433</p>
+                    </div>
+                  </div> 
+                </div>
+              <div class="cart-items-wrapper">
+                
+                <div class="cart-item d-flex">
+                  <img src="static/img/single-product/product.png">
+                  <div>
+                    <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                    <ul>
+                      <li class="cart-price">₹112</li>
+                      <li>
+                        <select>
+                          <option>Qty: 1</option>
+                          <option>Qty: 2</option>
+                          <option>Qty: 3</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <a class="remove" href="#">Remove</a>
+                  </div>
+                </div>
+                
+                
+                <div class="cart-item d-flex">
+                  <img src="static/img/single-product/product.png">
+                  <div>
+                    <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                    <ul>
+                      <li class="cart-price">₹112</li>
+                      <li>
+                        <select>
+                          <option>Qty: 1</option>
+                          <option>Qty: 2</option>
+                          <option>Qty: 3</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <a class="remove" href="#">Remove</a>
+                  </div>
+                </div>
+                <div class="cart-item d-flex">
+                    <img src="static/img/single-product/product.png">
+                    <div>
+                      <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                      <ul>
+                        <li class="cart-price">₹112</li>
+                        <li>
+                          <select>
+                            <option>Qty: 1</option>
+                            <option>Qty: 2</option>
+                            <option>Qty: 3</option>
+                          </select>
+                        </li>
+                      </ul>
+                      <a class="remove" href="#">Remove</a>
+                    </div>
+                  </div>
+                  <div class="cart-item d-flex">
+                      <img src="static/img/single-product/product.png">
+                      <div>
+                        <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                        <ul>
+                          <li class="cart-price">₹112</li>
+                          <li>
+                            <select>
+                              <option>Qty: 1</option>
+                              <option>Qty: 2</option>
+                              <option>Qty: 3</option>
+                            </select>
+                          </li>
+                        </ul>
+                        <a class="remove" href="#">Remove</a>
+                      </div>
+                    </div>
+                <div class="cart-item d-flex">
+                    <img src="static/img/single-product/product.png">
+                    <div>
+                      <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                      <ul>
+                        <li class="cart-price">₹112</li>
+                        <li>
+                          <select>
+                            <option value="1">Qty: 1</option>
+                            <option value="2">Qty: 2</option>
+                            <option value="3">Qty: 3</option>
+                          </select>
+                        </li>
+                      </ul>
+                      <a class="remove" href="#">Remove</a>
+                    </div>
+                  </div>
+                  <div class="cart-item d-flex">
+                      <img src="static/img/single-product/product.png">
+                      <div>
+                        <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                        <ul>
+                          <li class="cart-price">₹112</li>
+                          <li>
+                            <select>
+                              <option>Qty: 1</option>
+                              <option>Qty: 2</option>
+                              <option>Qty: 3</option>
+                            </select>
+                          </li>
+                        </ul>
+                        <a class="remove" href="#">Remove</a>
+                      </div>
+                    </div>
+                <div class="cart-item d-flex">
+                  <img src="static/img/single-product/product.png">
+                  <div>
+                    <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                    <ul>
+                      <li class="cart-price">₹112</li>
+                      <li>
+                        <select>
+                          <option>Qty: 1</option>
+                          <option>Qty: 2</option>
+                          <option>Qty: 3</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <a class="remove" href="#">Remove</a>
+                  </div>
+                </div>
+                <div class="cart-item d-flex">
+                  <img src="static/img/single-product/product.png">
+                  <div>
+                    <a href="#">Sunfeast Farmilia Digestive Biscuits</a>
+                    <ul>
+                      <li class="cart-price">₹112</li>
+                      <li>
+                        <select>
+                          <option>Qty: 1</option>
+                          <option>Qty: 2</option>
+                          <option>Qty: 3</option>
+                        </select>
+                      </li>
+                    </ul>
+                    <a class="remove" href="#">Remove</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+          </div>
+        </div>
+      <div id="controls" style="display:none">
+     <button id="recordButton" >Record</button>
+  	 <button id="pauseButton" disabled>Pause</button>
+  	 <button id="stopButton" disabled>Stop</button>
+
+    <div id="formats">Format: start recording to see sample rate</div>
+  	<p><strong>Recordings:</strong></p>
+  	<ol id="recordingsList"></ol></div>
+      </section>
+      <div class="product-details-tabs" style="position:fixed; bottom:55px;">
+          <!-- <nav class="nav">
+            <a class="nav-link" href="#">Pictures</a>
+            <a class="nav-link" href="#">Seller Information</a>
+            <a class="nav-link" href="#">Product Description</a>
+            <a class="nav-link" href="#">Health Information</a>
+            <a class="nav-link" href="#">Technical Specifications</a>
+            <a class="nav-link" href="#">Product Reviews</a>
+          </nav> -->
+          <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" onclick="pictures()"  role="tab">Pictures</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" onclick="Seller_Information()"  role="tab">Seller Information</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" onclick="Product_Description()"role="tab">Product Description</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" onclick="Health_Information()" role="tab">Health Information</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" onclick="Technical_Specifications()" role="tab">Technical Specifications</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" onclick="Product_Reviews()" role="tab">Product Reviews</a>
+              </li>
+          </ul><!-- Tab panes --> 
+        </div>
+
+    <footer id="footer" class="footer" >
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="siteMap flex">
+              <p style="margin-right: 25px;">Superb Mart</p>
+              <a href="#">Category </a>
+              <p>|</p>
+              <a href="#">Brands </a>
+              <p>|</p>
+              <a href="#">Stores</a>
+            </div>
+            <div class="footerCards flex">
+              <img src="static/img/footer/visa-logo.png" alt="visa logo" />
+              <img src="static/img/footer/master-card.png" alt="Master card logo" />
+              <img
+                src="static/img/footer/american-exp-logo.png"
+                alt="American Express logo"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="footerNewsLetter">
+               <a href="#" style="font-size:14px;padding-bottom: 10px">Terms and Conditions</a>
+                <p>YALAMANCHILI © 2020. All rights reserved </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script src="./js/zoom-gallery/modernizr.js"></script>
+    <script src="./js/jquery.js"></script> -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"
+  ></script>
+    <!-- <script src="./js/zoom-gallery/xzoom.min.js"></script>
+    <script src="./js/zoom-gallery/jquery.hammer.min.js"></script>
+    <script src="./js/fancybox/source/jquery.fancybox.js"></script>
+    <script src="./js/zoom-gallery/xzoom.min.js"></script>
+    <script src="./js/zoom-gallery/setup.js"></script> -->
+   
+    <script type = "text/javascript"
+         src = "{{ url_for('static', filename = 'js/script.js') }}" ></script>
+  <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+  </body>
+</html>

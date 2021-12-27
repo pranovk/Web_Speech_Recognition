@@ -1,0 +1,386 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Superb Mart</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark customizedNavbar">
+          <a class="navbar-brand" href="#">
+              <div class="brandLogo">
+                <p class="logoBoldText">SuperbMart</p>
+                <p class="logoSubText">eMarketplace</p>
+              </div>
+            </a>
+        <div class="showMobile toggleNavbar">
+          <!-- cart section -->
+          <div class="cartFlex">
+            <div class="cartIcon">
+              <p class="cartCount">0</p>
+              <img src="./img/cart-img.png" alt="" />
+            </div>
+            <!-- <p class="cartText">Cart</p> -->
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="navbarContainer">
+          <div class="topNavBar">
+              
+            <span class="navbar-text mr-auto userName hideMobile">
+              Mr.Ramakrishna Yalamanchili
+            </span>
+            <ul class="navbar-nav hideMobile">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">My Account</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cards</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Track Orders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Superb Care</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mainNavbar">
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav showMobile">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">My Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cards</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Track Orders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Superb Care</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Sign Out</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown" >
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    id="navbarDropdown"
+                    role="button"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Category
+                  </a>
+                  <div
+                    class="dropdown-menu customMegamenu"
+                    aria-labelledby="navbarDropdown"
+                  >
+                    <div class="container">
+                      <div class="row fullwidthRow">
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Category
+                          </p>
+
+                          <ul class="nav flex-column">
+                            <li class="nav-item womenFashionCategory">
+                              Women's Fashion
+                              <i
+                                class="fa fa-angle-right"
+                                aria-hidden="true"
+                              ></i>
+                            </li>
+                            <li class="nav-item menFashionCategory">
+                              Men's Fashion
+                              <i
+                                class="fa fa-angle-right"
+                                aria-hidden="true"
+                              ></i>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Title
+                          </p>
+                          <ul class="nav flex-column womenFashion">
+                            <li class="nav-item">
+                              Kurtas & Kurtis
+                            </li>
+                            <li class="nav-item">
+                              Suit Sets
+                            </li>
+                            <li class="nav-item">
+                              Sarees & Lehenga sets
+                            </li>
+                          </ul>
+                          <ul class="nav flex-column menFashion">
+                            <li class="nav-item">
+                              Formal Shoes
+                            </li>
+                            <li class="nav-item">
+                              Running Shoes
+                            </li>
+                            <li class="nav-item">
+                              Training Shoes
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Title
+                          </p>
+                          <ul class="nav flex-column womenFashion">
+                            <li class="nav-item">
+                              Kurtas & Kurtis
+                            </li>
+                            <li class="nav-item">
+                              Suit Sets
+                            </li>
+                            <li class="nav-item">
+                              Sarees & Lehenga sets
+                            </li>
+                          </ul>
+                          <ul class="nav flex-column menFashion">
+                            <li class="nav-item">
+                              Formal Shoes
+                            </li>
+                            <li class="nav-item">
+                              Running Shoes
+                            </li>
+                            <li class="nav-item">
+                              Training Shoes
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                        <div class="col-md-3">
+                          <p class="text-uppercase text-white megaMenuTitle">
+                            Title
+                          </p>
+                          <ul class="nav flex-column womenFashion">
+                            <li class="nav-item">
+                              Kurtas & Kurtis
+                            </li>
+                            <li class="nav-item">
+                              Suit Sets
+                            </li>
+                            <li class="nav-item">
+                              Sarees & Lehenga sets
+                            </li>
+                          </ul>
+                          <ul class="nav flex-column menFashion">
+                            <li class="nav-item">
+                              Formal Shoes
+                            </li>
+                            <li class="nav-item">
+                              Running Shoes
+                            </li>
+                            <li class="nav-item">
+                              Training Shoes
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.col-md-3  -->
+                      </div>
+                    </div>
+                    <!--  /.container  -->
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Brands</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Stores</a>
+                </li>
+              </ul>
+
+              <div class="col-auto hideMobile">
+                <label class="sr-only" for="inlineFormInputGroup"
+                  >Product Search</label
+                >
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <div class="input-group-text locationRoot">
+                      <div class="locationDetailsFlex">
+                        <div class="locationIcon">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <div class="locationContent">
+                          <p>Delivering to</p>
+                          <p class="searchBarpinCode">400020</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inlineFormInputGroup"
+                    placeholder="Product Search"
+                  />
+                  <div class="input-group-append searchBarRoot">
+                    <button class="btn btn-secondary" type="button">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <!-- search bar enfd -->
+              <div class="sortSection hideMobile">
+                <div class="sortByText">
+                  <p>Sort by</p>
+                </div>
+                <div class="sortByFlex atoz">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>A</p>
+                    <p>Z</p>
+                  </div>
+                </div>
+                <div class="sortByFlex ztoa">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>Z</p>
+                    <p>A</p>
+                  </div>
+                </div>
+                <div class="sortByFlex oneToNine">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>1</p>
+                    <p>9</p>
+                  </div>
+                </div>
+                <div class="sortByFlex nineToOne">
+                  <i class="fa fa-long-arrow-down" aria-hidden="true"></i>
+                  <div class="sortText">
+                    <p>9</p>
+                    <p>1</p>
+                  </div>
+                </div>
+              </div>
+              <!-- cart section -->
+              <div class="cartFlex hideMobile">
+                <div class="cartIcon">
+                  <p class="cartCount">0</p>
+                  <img src="./img/cart-img.png" alt="" />
+                </div>
+                <p class="cartText">Cart</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="orderSuccess" class="">
+      <div class="container middle">
+        <div class="sitemap">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="single-product.html">Single product</a></li>
+            <li><a href="cart.html">Cart </a></li>
+            <li><a href="checkout.html">Checkout</a></li>
+            <li>
+              <a href="shipping-information.html">Shipping Information</a>
+            </li>
+            <li><a href="success.html">Success</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <footer id="footer" class="footer">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="siteMap flex">
+              <p style="margin-right: 25px;">Superb Mart</p>
+              <a href="#">Category </a>
+              <p>|</p>
+              <a href="#">Brands </a>
+              <p>|</p>
+              <a href="#">Stores</a>
+            </div>
+            <div class="footerCards flex">
+              <img src="./img/footer/visa-logo.png" alt="visa logo" />
+              <img src="./img/footer/master-card.png" alt="Master card logo" />
+              <img
+                src="./img/footer/american-exp-logo.png"
+                alt="American Express logo"
+              />
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="footerNewsLetter">
+                <a href="#" style="font-size:14px;padding-bottom: 10px">Terms and Conditions</a>
+            <p>YALAMANCHILI © 2020. All rights reserved </p>
+
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
